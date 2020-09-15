@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="item">item0</li>
+        <li class="item">item1</li>
+        <li class="item">item2</li>
+        <li class="item">item3</li>
+        <li class="item">item4</li>
+        <a href=""></a>
+    </ul>
+    <h2 class="item"></h2>
+    <button id="submit">submit</button>
+
+    <h2 class="hello">Hello</h2>
+    <h2>Header 2</h2>
+    <h2 id="submit">Hey</h2>
+
+    <!-- Javascript -->
+    <script>
+        // // get by tag name
+        // const headers = document.getElementsByTagName('h2'); // gets all h2 elements
+        // console.log(headers[0]); //  <h2 class="hello">Hello</h2>
+        // console.log(headers[1]); // <h2>Header 2</h2>
+        // console.log(headers); // all h2 elements
+        // // get by class name
+        // const list = document.getElementsByClassName('item');
+        // console.log(list); // gets all items with class of list
+        // console.log(list[1]); // <li class="item">item1</li>
+        // console.log(list[3]); // <li class="item">item3</li>
+        // console.log(list.length); // returns number of items
+        // // get by id
+        // const button = document.getElementById('submit'); // only returns first instance
+        // console.log(button);
+        // Select using css selectors capible of doing everything above
+        const headers = document.querySelectorAll('h2'); // Without the All only first instance is selected
+        console.log(headers); // all h2 elements
+        console.log(headers[2]); //<h2 id="submit">Hey</h2>
+        const list = document.querySelectorAll('.item'); // gets item by class
+        console.log(list); // selects everything with item class
+        console.log(list[4]); // fith item with class of item
+        const button = document.querySelector('#submit'); // gets item by id
+        console.log(button);
+        const buttons = document.querySelector('h2.item') // select by element tag and class
+        console.log(buttons);
+        const aTag = document.querySelector("#list a") // selects a tag in unordered list with id of list
+        console.log(aTag);
+
+        
+    </script>
+</body>
+</html>
